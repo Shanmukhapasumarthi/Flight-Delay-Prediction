@@ -1,0 +1,35 @@
+{
+  "cost_model": {
+    "avg_delay_minutes_when_delayed": 43.72366984752984,
+    "cost_per_delay_minute_usd": 148.0,
+    "cost_of_one_delay_usd": 6471.103137434417,
+    "mitigation_cost_usd": 900.0,
+    "mitigation_effectiveness": 0.3,
+    "benefit_of_correct_intervention_usd": 1941.330941230325,
+    "break_even_probability": 0.4635994723442784
+  },
+  "optimal_threshold": 0.53,
+  "at_optimum": {
+    "alert_rate": 0.046604932402882625,
+    "precision": 0.9163606691146471,
+    "recall": 0.2039593171086088,
+    "alerts": 2451.0,
+    "tp": 2246.0,
+    "fp": 205.0,
+    "net_benefit_usd": 2154329.2940033097,
+    "gross_saving_usd": 4360229.29400331,
+    "intervention_cost_usd": 2205900.0
+  },
+  "test_window_days": 92,
+  "test_flights": 52591,
+  "net_benefit_per_flight_usd": 40.96383970647658,
+  "annualised_net_benefit_usd": 8547067.307730522,
+  "baseline_alert_every_flight_usd": -25953963.675171662,
+  "baseline_heuristic_usd": -1854063.6924750875,
+  "uplift_vs_heuristic_usd": 4008392.986478397,
+  "propagation": {
+    "share_of_delay_minutes_inherited": 0.3240635785290992,
+    "delayed_flights_with_late_inbound": 0.32763477587238987,
+    "first_leg_delay_rate": 0.15502557740824888
+  }
+}

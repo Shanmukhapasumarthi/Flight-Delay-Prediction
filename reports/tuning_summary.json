@@ -1,0 +1,70 @@
+{
+  "randomized_search": {
+    "best_cv_pr_auc": 0.4940166584447977,
+    "seconds": 43.0657434463501,
+    "params": {
+      "subsample": 0.85,
+      "reg_lambda": 10.0,
+      "num_leaves": 255,
+      "min_child_samples": 300,
+      "learning_rate": 0.02,
+      "colsample_bytree": 1.0
+    }
+  },
+  "optuna": {
+    "best_valid_pr_auc": 0.5440910869875103,
+    "seconds": 35.93558430671692,
+    "n_trials": 10,
+    "params": {
+      "learning_rate": 0.14738521676897892,
+      "num_leaves": 21,
+      "max_depth": 14,
+      "min_child_samples": 59,
+      "subsample": 0.9923216286623103,
+      "colsample_bytree": 0.7902956466541318,
+      "reg_alpha": 0.014617365368478828,
+      "reg_lambda": 0.32972752589711846,
+      "min_split_gain": 0.2215552125686271
+    }
+  },
+  "final": {
+    "params": {
+      "learning_rate": 0.14738521676897892,
+      "num_leaves": 21,
+      "max_depth": 14,
+      "min_child_samples": 59,
+      "subsample": 0.9923216286623103,
+      "colsample_bytree": 0.7902956466541318,
+      "reg_alpha": 0.014617365368478828,
+      "reg_lambda": 0.32972752589711846,
+      "min_split_gain": 0.2215552125686271,
+      "n_estimators": 57,
+      "subsample_freq": 1
+    },
+    "test_calibrated": {
+      "roc_auc": 0.6988430275534377,
+      "pr_auc": 0.504785351599355,
+      "log_loss": 0.4374167171031434,
+      "brier": 0.13622325152086995,
+      "accuracy": 0.8292863797988249,
+      "precision": 0.9038919777601271,
+      "recall": 0.206683617871413,
+      "f1": 0.33643754619364374,
+      "base_rate": 0.20938943925766768,
+      "lift_top_decile": 2.903251717240201
+    },
+    "test_raw": {
+      "roc_auc": 0.6988430275534377,
+      "pr_auc": 0.504785351599355,
+      "log_loss": 0.4374167171031434,
+      "brier": 0.13622325152086995,
+      "accuracy": 0.8292863797988249,
+      "precision": 0.9038919777601271,
+      "recall": 0.206683617871413,
+      "f1": 0.33643754619364374,
+      "base_rate": 0.20938943925766768,
+      "lift_top_decile": 2.903251717240201
+    },
+    "threshold_best_f1": 0.21834816714859384
+  }
+}

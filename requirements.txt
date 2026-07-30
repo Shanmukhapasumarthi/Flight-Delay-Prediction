@@ -1,0 +1,34 @@
+# core
+pandas
+numpy
+scipy
+pyarrow
+PyYAML
+joblib
+
+# modelling
+scikit-learn
+lightgbm
+xgboost
+catboost
+optuna
+shap
+
+# data
+holidays
+
+# visualisation
+matplotlib
+seaborn
+
+# serving
+fastapi
+uvicorn[standard]
+pydantic
+
+# dashboard
+streamlit
+
+# testing
+pytest
+httpx2

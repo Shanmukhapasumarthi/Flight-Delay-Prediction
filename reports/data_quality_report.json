@@ -1,0 +1,90 @@
+{
+  "airports: duplicate codes removed": {
+    "rows_affected": 0,
+    "detail": ""
+  },
+  "aircraft: duplicate tail numbers removed": {
+    "rows_affected": 0,
+    "detail": ""
+  },
+  "weather: duplicate observations removed": {
+    "rows_affected": 749,
+    "detail": ""
+  },
+  "weather: rows for unknown airports dropped": {
+    "rows_affected": 0,
+    "detail": ""
+  },
+  "weather: sentinel values -> NaN": {
+    "rows_affected": 8988,
+    "detail": "(-999 / 99999)"
+  },
+  "weather: out-of-range values -> NaN": {
+    "rows_affected": 0,
+    "detail": ""
+  },
+  "weather: hours reconstructed by interpolation": {
+    "rows_affected": 8541,
+    "detail": "(missing observations)"
+  },
+  "weather: residual NaN filled with airport median": {
+    "rows_affected": 0,
+    "detail": ""
+  },
+  "flights: duplicate flight_id removed": {
+    "rows_affected": 1077,
+    "detail": ""
+  },
+  "flights: invalid airport codes dropped": {
+    "rows_affected": 403,
+    "detail": "e.g. ['---', 'ZZZ']"
+  },
+  "flights: origin == destination dropped": {
+    "rows_affected": 0,
+    "detail": ""
+  },
+  "flights: unparseable timestamps": {
+    "rows_affected": 0,
+    "detail": ""
+  },
+  "flights: local timestamps aligned to UTC": {
+    "rows_affected": 268843,
+    "detail": "5 distinct time zones"
+  },
+  "flights: arrival <= departure dropped": {
+    "rows_affected": 195,
+    "detail": ""
+  },
+  "flights: implausible block time dropped": {
+    "rows_affected": 1,
+    "detail": ""
+  },
+  "flights: invalid distance -> NaN": {
+    "rows_affected": 539,
+    "detail": ""
+  },
+  "flights: absurd departure_delay_min -> NaN": {
+    "rows_affected": 212,
+    "detail": ""
+  },
+  "flights: absurd arrival_delay_min -> NaN": {
+    "rows_affected": 0,
+    "detail": ""
+  },
+  "flights: unknown/missing tail number": {
+    "rows_affected": 1610,
+    "detail": "kept, propagation features flagged"
+  },
+  "flights: cancelled (flagged, not modelled)": {
+    "rows_affected": 3480,
+    "detail": ""
+  },
+  "flights: missing target on operated flight dropped": {
+    "rows_affected": 209,
+    "detail": ""
+  },
+  "flights: TOTAL rows in -> out": {
+    "rows_affected": 270323,
+    "detail": "-> 268,438"
+  }
+}

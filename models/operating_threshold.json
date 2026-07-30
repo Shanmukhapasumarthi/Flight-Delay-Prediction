@@ -1,0 +1,6 @@
+{
+  "threshold": 0.53,
+  "break_even_probability": 0.4635994723442784,
+  "precision": 0.9163606691146471,
+  "recall": 0.2039593171086088
+}

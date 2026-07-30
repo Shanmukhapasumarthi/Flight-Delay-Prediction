@@ -1,0 +1,68 @@
+project:
+  name: flight-delay-prediction
+  seed: 42
+  target: is_delayed              # departure delay >= threshold_minutes
+  threshold_minutes: 15
+
+data:
+  start_date: "2023-01-01"
+  end_date: "2024-03-31"
+  n_aircraft: 170                 # drives flight volume (~240k flights)
+  raw_dir: data/raw
+  interim_dir: data/interim
+  processed_dir: data/processed
+
+# Chronological (not random) splits -- a random split would leak the future
+# into the past through the rolling historical features.
+split:
+  train_end: "2023-10-31"
+  valid_end: "2023-12-31"
+  test_end: "2024-03-31"
+
+features:
+  rolling_windows:
+    carrier_days: 7
+    route_days: 30
+    airport_days: 7
+  max_correlation: 0.95           # prune one of any pair above this
+  top_k: 45                       # features kept after consensus selection
+
+models:
+  random_forest:
+    n_estimators: 150
+    max_depth: 14
+    min_samples_leaf: 50
+    n_jobs: -1
+  xgboost:
+    n_estimators: 600
+    learning_rate: 0.05
+    max_depth: 7
+    subsample: 0.85
+    colsample_bytree: 0.8
+  lightgbm:
+    n_estimators: 800
+    learning_rate: 0.05
+    num_leaves: 63
+    subsample: 0.85
+    colsample_bytree: 0.8
+  catboost:
+    iterations: 700
+    learning_rate: 0.06
+    depth: 7
+
+tuning:
+  n_trials: 10
+  timeout_seconds: 420
+
+business:
+  # Cost assumptions (US domestic, per A4A / FAA style figures)
+  cost_per_delay_minute_usd: 101.0     # aircraft block-hour direct operating cost
+  passenger_cost_per_minute_usd: 47.0  # value of passenger time, per flight
+  avg_delay_minutes_when_delayed: 55.0
+  mitigation_cost_usd: 900.0           # cost of acting on a delay warning
+  mitigation_effectiveness: 0.30       # fraction of delay minutes recovered
+
+paths:
+  models_dir: models
+  reports_dir: reports
+  figures_dir: reports/figures

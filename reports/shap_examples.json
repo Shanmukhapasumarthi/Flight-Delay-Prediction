@@ -1,0 +1,179 @@
+{
+  "highest_risk": {
+    "flight": "YX2605",
+    "route": "CLT-ORD",
+    "scheduled_departure_local": "2024-01-12 08:46:05",
+    "predicted_probability": 0.9972728926303728,
+    "actual_departure_delay_min": 185.0,
+    "actually_delayed": 1,
+    "contributions": [
+      {
+        "feature": "upstream_delay_min",
+        "label": "Inbound aircraft late",
+        "value": 160.0,
+        "display_value": "160 min",
+        "shap_value": 5.494659561488216,
+        "direction": "increases risk"
+      },
+      {
+        "feature": "slack_vs_upstream_min",
+        "label": "Ground-time slack",
+        "value": -113.98332977294922,
+        "display_value": "-114 min",
+        "shap_value": 0.6926979321000568,
+        "direction": "increases risk"
+      },
+      {
+        "feature": "aircraft_cum_delay_today",
+        "label": "Delay accumulated by this airframe today",
+        "value": 160.0,
+        "display_value": "160 min",
+        "shap_value": 0.34644274502700473,
+        "direction": "increases risk"
+      },
+      {
+        "feature": "prev_leg_known",
+        "label": "Inbound leg status confirmed",
+        "value": 0.0,
+        "display_value": "0.0",
+        "shap_value": 0.2721051071091685,
+        "direction": "increases risk"
+      },
+      {
+        "feature": "scheduled_turnaround_min",
+        "label": "Scheduled turnaround",
+        "value": 46.0,
+        "display_value": "46 min",
+        "shap_value": 0.25839282454725987,
+        "direction": "increases risk"
+      },
+      {
+        "feature": "carrier_code",
+        "label": "Operating carrier",
+        "value": "YX",
+        "display_value": "YX",
+        "shap_value": 0.08786907025081,
+        "direction": "increases risk"
+      }
+    ],
+    "narrative": "Predicted departure-delay risk 100%. Driven up by: inbound aircraft late (160 min); ground-time slack (-114 min); delay accumulated by this airframe today (160 min)."
+  },
+  "typical": {
+    "flight": "UA5381",
+    "route": "BOS-JFK",
+    "scheduled_departure_local": "2024-02-09 08:20:43",
+    "predicted_probability": 0.16744166588115905,
+    "actual_departure_delay_min": 2.0,
+    "actually_delayed": 0,
+    "contributions": [
+      {
+        "feature": "upstream_delay_min",
+        "label": "Inbound aircraft late",
+        "value": 28.0,
+        "display_value": "28 min",
+        "shap_value": -0.30271940188350366,
+        "direction": "reduces risk"
+      },
+      {
+        "feature": "slack_vs_upstream_min",
+        "label": "Ground-time slack",
+        "value": -6.616664886474609,
+        "display_value": "-7 min",
+        "shap_value": 0.2095366098651526,
+        "direction": "increases risk"
+      },
+      {
+        "feature": "day_of_week",
+        "label": "Day of week",
+        "value": 4.0,
+        "display_value": "4.0",
+        "shap_value": 0.11280012585535444,
+        "direction": "increases risk"
+      },
+      {
+        "feature": "time_block",
+        "label": "Departure period",
+        "value": "early_morning",
+        "display_value": "early_morning",
+        "shap_value": -0.1094626377671102,
+        "direction": "reduces risk"
+      },
+      {
+        "feature": "scheduled_block_min",
+        "label": "Scheduled block time",
+        "value": 51.21666717529297,
+        "display_value": "51 min",
+        "shap_value": -0.10610314807457409,
+        "direction": "reduces risk"
+      },
+      {
+        "feature": "scheduled_turnaround_min",
+        "label": "Scheduled turnaround",
+        "value": 51.0,
+        "display_value": "51 min",
+        "shap_value": 0.09426334186388304,
+        "direction": "increases risk"
+      }
+    ],
+    "narrative": "Predicted departure-delay risk 17%. Driven up by: ground-time slack (-7 min); day of week (4.0); scheduled turnaround (51 min). Offset by: inbound aircraft late (28 min); departure period (early_morning)."
+  },
+  "lowest_risk": {
+    "flight": "AS5247",
+    "route": "LAX-SLC",
+    "scheduled_departure_local": "2024-02-24 02:26:19",
+    "predicted_probability": 0.055819762056916924,
+    "actual_departure_delay_min": -1.0,
+    "actually_delayed": 0,
+    "contributions": [
+      {
+        "feature": "upstream_delay_min",
+        "label": "Inbound aircraft late",
+        "value": 0.0,
+        "display_value": "0 min",
+        "shap_value": -0.22286643708599163,
+        "direction": "reduces risk"
+      },
+      {
+        "feature": "carrier_code",
+        "label": "Operating carrier",
+        "value": "AS",
+        "display_value": "AS",
+        "shap_value": -0.20355546352486756,
+        "direction": "reduces risk"
+      },
+      {
+        "feature": "time_block",
+        "label": "Departure period",
+        "value": "night",
+        "display_value": "night",
+        "shap_value": -0.14891869919410602,
+        "direction": "reduces risk"
+      },
+      {
+        "feature": "dep_time_decimal",
+        "label": "Departure time of day",
+        "value": 2.433333396911621,
+        "display_value": "02:26",
+        "shap_value": -0.14598232476443368,
+        "direction": "reduces risk"
+      },
+      {
+        "feature": "day_of_week",
+        "label": "Day of week",
+        "value": 5.0,
+        "display_value": "5.0",
+        "shap_value": -0.11155285648602768,
+        "direction": "reduces risk"
+      },
+      {
+        "feature": "destination",
+        "label": "Destination station",
+        "value": "SLC",
+        "display_value": "SLC",
+        "shap_value": -0.09488925248122958,
+        "direction": "reduces risk"
+      }
+    ],
+    "narrative": "Predicted departure-delay risk 6%. Offset by: inbound aircraft late (0 min); operating carrier (AS)."
+  }
+}
